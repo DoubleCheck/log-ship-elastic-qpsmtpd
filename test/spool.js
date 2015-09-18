@@ -4,11 +4,9 @@ var assert   = require('assert');
 var fs       = require('fs');
 var path     = require('path');
 
-var logship  = require('../lib/logship');
 var spool    = require('../lib/spool');
 
 describe('log-ship-elastic-qpsmtpd', function () {
-  var shipper = logship.createShipper('./test');
 
   before(function (done) {
     fs.chmod(path.resolve('test','spool','nowrite'), '0555', function (err) {
@@ -18,10 +16,7 @@ describe('log-ship-elastic-qpsmtpd', function () {
   });
 
   describe('spool', function () {
-    var spooldir = shipper.cfg.main.spool;
-    if (process.env.NODE_ENV === 'test') {
-      spooldir = path.resolve('./test', 'spool');
-    }
+    var spooldir = path.resolve('./test', 'spool');
 
     it('spool dir is defined', function (done) {
       assert.ok(spooldir);

@@ -4,7 +4,10 @@
   "version": "0.0.1",
   "private": false,
   "keywords": [
-    "log", "qpsmtpd", "elasticsearch", "log ship"
+    "log",
+    "qpsmtpd",
+    "elasticsearch",
+    "log ship"
   ],
   "homepage": "https://github.com/DoubleCheck/log-ship-elastic-qpsmtpd",
   "bugs": {
@@ -16,19 +19,20 @@
   },
   "dependencies": {
     "elasticsearch": "*",
-    "ini": "^1.3.4",
-    "safe-log-reader": "*"
+    "ini": ">=1.3.4",
+    "moment-timezone": ">=0.4.0",
+    "safe-log-reader": ">=0.9.9"
   },
   "devDependencies": {
-    "blanket": "^1.1.7",
-    "coveralls": "^2.11.2",
-    "grunt": "^0.4.5",
-    "grunt-eslint": "^17.0.0",
-    "grunt-mocha-test": "^0.12.7",
-    "grunt-version-check": ">0.2.1",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
-    "travis-cov": "^0.2.5"
+    "blanket": "*",
+    "coveralls": "*",
+    "grunt": "*",
+    "grunt-eslint": "*",
+    "grunt-mocha-test": "*",
+    "grunt-version-check": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "travis-cov": "*"
   },
   "config": {
     "blanket": {
@@ -45,7 +49,7 @@
       "threshold": 80
     }
   },
-  "license" : "BSD-2-Clause",
+  "license": "BSD-2-Clause",
   "scripts": {
     "coverage": "NODE_ENV=test COVERAGE=1 ./node_modules/.bin/mocha --require blanket --reporter travis-cov",
     "coveralls": "COVERAGE=1 ./node_modules/.bin/mocha --require blanket --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",

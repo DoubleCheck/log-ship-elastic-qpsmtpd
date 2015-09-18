@@ -1,14 +1,15 @@
 'use strict';
 
+var logger   = require('./lib/logger');
 var logship  = require('./lib/logship');
-var shipper  = logship.createShipper('./');
+var shipper  = logship.createShipper();
 
 process.on('SIGINT', function() {     // Control-C
-  console.log('\nSIGINT received (Ctrl-C)');
+  logger.info('\nSIGINT received (Ctrl-C)');
   shipper.shutdown();
 });
 
 process.on('SIGTERM', function () {   // kill $PID
-  console.log('\nSIGTERM received');
+  logger.info('\nSIGTERM received');
   shipper.shutdown();
 });
