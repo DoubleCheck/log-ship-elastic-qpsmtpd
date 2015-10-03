@@ -14,7 +14,6 @@ describe('log-ship-elastic-qpsmtpd', function () {
     });
 
     it('config has required sections', function (done) {
-      // console.log(cfg);
       ['main', 'elastic', 'parser', 'reader'].forEach(function (s) {
         assert.ok(shipper.cfg[s]);
       });
