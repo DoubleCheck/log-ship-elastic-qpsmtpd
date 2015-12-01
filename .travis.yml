@@ -1,8 +1,8 @@
 language: node_js
 node_js:
     - "0.10"
-    - "0.12"
-    - iojs
+    - "4.2"
+    - "5.0"
 
 os:
     - linux
@@ -11,7 +11,7 @@ os:
 matrix:
     allow_failures:
         - os: osx
-        - node_js: iojs
+        - node_js: 5.0
     fast_finish: true
 
 services:
@@ -20,10 +20,11 @@ services:
 # wait for elasticsearch to start up
 before_script:
   - chmod -w ./test/spool/nowrite
-  - sleep 12
+  - sleep 10
 
 after_success:
-    - npm run coverage
-    - npm run coveralls
+  - npm install istanbul codecov.io
+  - NODE_ENV=cov ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec
+  - cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js
 
 sudo: false

@@ -1,7 +1,7 @@
 {
   "name": "log-ship-elastic-qpsmtpd",
   "description": "Ship Qpsmtpd logs to Elasticsearch",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "private": false,
   "keywords": [
     "log",
@@ -24,30 +24,11 @@
     "safe-log-reader": ">=0.9.9"
   },
   "devDependencies": {
-    "blanket": "*",
-    "coveralls": "*",
     "grunt": "*",
     "grunt-eslint": "*",
     "grunt-mocha-test": "*",
     "grunt-version-check": "*",
-    "mocha": "*",
-    "mocha-lcov-reporter": "*",
-    "travis-cov": "*"
-  },
-  "config": {
-    "blanket": {
-      "pattern": [
-        "server.js",
-        "lib"
-      ],
-      "data-cover-never": [
-        "node_modules",
-        "test"
-      ]
-    },
-    "travis-cov": {
-      "threshold": 80
-    }
+    "mocha": "*"
   },
   "license": "BSD-2-Clause",
   "scripts": {

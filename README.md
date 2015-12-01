@@ -31,7 +31,7 @@ Edit log-ship-elastic-qpsmtpd.ini, then launch with:
 
 [ci-img]: https://travis-ci.org/DoubleCheck/log-ship-elastic-qpsmtpd.svg
 [ci-url]: https://travis-ci.org/DoubleCheck/log-ship-elastic-qpsmtpd
-[cov-img]: https://coveralls.io/repos/DoubleCheck/log-ship-elastic-qpsmtpd/badge.svg
-[cov-url]: https://coveralls.io/github/DoubleCheck/log-ship-elastic-qpsmtpd
+[cov-img]: https://codecov.io/github/DoubleCheck/log-ship-elastic-qpsmtpd/coverage.svg
+[cov-url]: https://codecov.io/github/DoubleCheck/log-ship-elastic-qpsmtpd
 [clim-img]: https://codeclimate.com/github/DoubleCheck/log-ship-elastic-qpsmtpd/badges/gpa.svg
 [clim-url]: https://codeclimate.com/github/DoubleCheck/log-ship-elastic-qpsmtpd
